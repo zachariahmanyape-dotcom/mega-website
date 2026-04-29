@@ -13,10 +13,16 @@ export default function MegaFooter() {
 
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
-              <svg width="32" height="32" viewBox="0 0 22 22" fill="none">
-                <circle cx="7" cy="11" r="7" fill="#0F52BA" fillOpacity="0.85" />
-                <circle cx="15" cy="11" r="7" fill="#0F52BA" fillOpacity="0.55" />
-                <circle cx="11" cy="6" r="7" fill="#0F52BA" fillOpacity="0.4" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="32" height="32">
+                <defs>
+                  <clipPath id="cp1-footer"><circle cx="250" cy="181.4" r="140"/></clipPath>
+                  <clipPath id="cp12-footer" clipPathUnits="userSpaceOnUse"><circle cx="175" cy="311.3" r="140" clipPath="url(#cp1-footer)"/></clipPath>
+                  <clipPath id="cp123-footer" clipPathUnits="userSpaceOnUse"><circle cx="325" cy="311.3" r="140" clipPath="url(#cp12-footer)"/></clipPath>
+                </defs>
+                <rect x="0" y="0" width="500" height="500" fill="#FFFFFF" clipPath="url(#cp123-footer)"/>
+                <circle cx="250" cy="181.4" r="140" fill="none" stroke="#FFFFFF" strokeWidth="9"/>
+                <circle cx="175" cy="311.3" r="140" fill="none" stroke="#FFFFFF" strokeWidth="9"/>
+                <circle cx="325" cy="311.3" r="140" fill="none" stroke="#FFFFFF" strokeWidth="9"/>
               </svg>
               <span style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 36, color: '#fff', letterSpacing: 3, lineHeight: 1 }}>MEGA</span>
             </div>

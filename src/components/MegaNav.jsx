@@ -39,10 +39,16 @@ export default function MegaNav() {
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginRight: 'auto', cursor: 'pointer' }}
            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <circle cx="7" cy="11" r="7" fill={COBALT} fillOpacity="0.85" />
-          <circle cx="15" cy="11" r="7" fill={COBALT} fillOpacity="0.55" />
-          <circle cx="11" cy="6" r="7" fill={COBALT} fillOpacity="0.4" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="22" height="22">
+          <defs>
+            <clipPath id="cp1-nav"><circle cx="250" cy="181.4" r="140"/></clipPath>
+            <clipPath id="cp12-nav" clipPathUnits="userSpaceOnUse"><circle cx="175" cy="311.3" r="140" clipPath="url(#cp1-nav)"/></clipPath>
+            <clipPath id="cp123-nav" clipPathUnits="userSpaceOnUse"><circle cx="325" cy="311.3" r="140" clipPath="url(#cp12-nav)"/></clipPath>
+          </defs>
+          <rect x="0" y="0" width="500" height="500" fill="#FFFFFF" clipPath="url(#cp123-nav)"/>
+          <circle cx="250" cy="181.4" r="140" fill="none" stroke="#FFFFFF" strokeWidth="9"/>
+          <circle cx="175" cy="311.3" r="140" fill="none" stroke="#FFFFFF" strokeWidth="9"/>
+          <circle cx="325" cy="311.3" r="140" fill="none" stroke="#FFFFFF" strokeWidth="9"/>
         </svg>
         <span style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 24, color: '#fff', letterSpacing: 2, lineHeight: 1 }}>MEGA</span>
       </div>
