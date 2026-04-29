@@ -67,7 +67,7 @@ export default function MegaFooter() {
                 {item.label}
               </a>
             ))}
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://www.linkedin.com/company/mega-mentorship/" target="_blank" rel="noopener noreferrer" style={{
               display: 'flex', alignItems: 'center', gap: 8,
               fontFamily: "'Montserrat', sans-serif", fontSize: 14,
               color: 'rgba(255,255,255,0.45)', textDecoration: 'none',

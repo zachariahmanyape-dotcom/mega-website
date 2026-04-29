@@ -41,8 +41,16 @@ export default function MegaHero() {
           </h1>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: 'rgba(255,255,255,0.65)',
             lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
-            MEGA is the UAE's leading mentorship and professional development platform for students,
-            young professionals, and the organizations that employ them.
+            MEGA (Middle East Growth Academy) exists to give people the foundation they need before
+            stepping fully into the professional world. Most enter their first roles capable but
+            underprepared, unsure how to communicate, manage their time, or meet the expectations
+            of a modern workplace.
+          </p>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: 'rgba(255,255,255,0.65)',
+            lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
+            We bridge that gap. Through structured mentorship and real-world skill development,
+            members build the habits, confidence, and systems needed to operate professionally
+            from day one.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer" style={{
