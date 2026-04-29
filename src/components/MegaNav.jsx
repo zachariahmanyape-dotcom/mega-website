@@ -11,7 +11,7 @@ export default function MegaNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = ['About', 'Verticals', 'Vantage', 'Subject Areas', 'Pricing', 'FAQ'];
+  const navLinks = ['About', 'Verticals', 'Subject Areas', 'Vantage', 'Pricing', 'FAQ'];
 
   const scrollTo = (id) => {
     const idMap = {
