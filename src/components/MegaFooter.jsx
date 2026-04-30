@@ -1,7 +1,7 @@
 export default function MegaFooter() {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
   };
 
   return (

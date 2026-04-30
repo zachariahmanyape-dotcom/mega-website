@@ -23,7 +23,7 @@ export default function MegaNav() {
       'FAQ': 'faq',
     };
     const el = document.getElementById(idMap[id] || id.toLowerCase().replace(/\s+/g, '-'));
-    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
   };
 
   return (
