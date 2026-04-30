@@ -55,10 +55,10 @@ export default function MegaAbout() {
   ];
 
   return (
-    <section id="about" style={{ background: '#111111', padding: '100px 0' }}>
+    <section id="about" className="section-pad" style={{ background: '#111111', padding: '100px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px',
         display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 80, alignItems: 'start' }}
-        className="about-grid">
+        className="about-grid inner-container">
 
         <div>
           <div style={{ fontFamily: "'Fira Sans Extra Condensed', sans-serif", fontSize: 13,
@@ -152,7 +152,7 @@ export default function MegaAbout() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 16 }}>
+          <div className="about-metrics" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 16 }}>
             {metrics.map((m) => (
               <div key={m} style={{
                 background: 'rgba(15,82,186,0.1)', border: '1px solid rgba(15,82,186,0.25)',

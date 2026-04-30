@@ -19,14 +19,14 @@ export default function MegaHero() {
   }, []);
 
   return (
-    <section id="hero" style={{
+    <section id="hero" className="hero-section" style={{
       minHeight: '100vh', background: '#0A0A0A',
       display: 'flex', alignItems: 'center', padding: '120px 0 80px',
       overflow: 'hidden',
     }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px', width: '100%',
         display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}
-        className="hero-grid">
+        className="hero-grid inner-container">
 
         {/* Left */}
         <div>
@@ -35,9 +35,9 @@ export default function MegaHero() {
             fontSize: 'clamp(32px, 3.2vw, 54px)',
             lineHeight: 0.95, letterSpacing: 2, margin: '0 0 28px', color: '#fff',
           }}>
-            <span style={{ display: 'block', width: '700px', fontSize: '75px' }}>CLOSE THE DISTANCE</span>
-            <span style={{ display: 'block', width: '700px', fontSize: '75px' }}>BETWEEN YOU AND</span>
-            <span style={{ display: 'block', width: '700px', fontSize: '75px' }}>YOUR POTENTIAL<span style={{ color: '#0F52BA' }}>.</span></span>
+            <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>CLOSE THE DISTANCE</span>
+            <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>BETWEEN YOU AND</span>
+            <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>YOUR POTENTIAL<span style={{ color: '#0F52BA' }}>.</span></span>
           </h1>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: 'rgba(255,255,255,0.65)',
             lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
@@ -53,16 +53,19 @@ export default function MegaHero() {
             from day one.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer" style={{
-              background: '#0F52BA', color: '#fff', borderRadius: 999, padding: '14px 32px',
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-              textDecoration: 'none', letterSpacing: 0.5, transition: 'all 0.2s',
-            }}
+            <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer"
+              className="hero-cta-btn"
+              style={{
+                background: '#0F52BA', color: '#fff', borderRadius: 999, padding: '14px 32px',
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                textDecoration: 'none', letterSpacing: 0.5, transition: 'all 0.2s',
+              }}
               onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 24px 6px #0F52BA66'; e.currentTarget.style.filter = 'brightness(1.2)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.filter = 'none'; }}>
               Get Started
             </a>
-            <button onClick={() => { const el = document.getElementById('about'); if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' }); }}
+            <button onClick={() => { const el = document.getElementById('about'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); }}
+              className="hero-cta-btn"
               style={{
                 background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,0.4)',
                 borderRadius: 999, padding: '14px 32px',
@@ -91,7 +94,7 @@ export default function MegaHero() {
             filter: 'blur(50px)', zIndex: 0,
           }} />
 
-          <div style={{ position: 'relative', width: '100%', maxWidth: 480, height: 280, zIndex: 1 }}>
+          <div className="hero-stat-container" style={{ position: 'relative', width: '100%', maxWidth: 480, height: 280, zIndex: 1 }}>
             {heroStats.map((stat, i) => {
               const offset = (i - active + heroStats.length) % heroStats.length;
               const isActive = offset === 0;
@@ -106,7 +109,7 @@ export default function MegaHero() {
               if (isHidden) { transform = 'translateY(56px) scale(0.88)'; opacity = 0; zIndex = 7; }
 
               return (
-                <div key={i} style={{
+                <div key={i} className="hero-stat-card" style={{
                   position: 'absolute', top: 0, left: 0, right: 0,
                   background: 'rgba(10,14,35,0.68)',
                   backdropFilter: 'blur(18px)',

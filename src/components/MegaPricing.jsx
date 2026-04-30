@@ -4,7 +4,7 @@ function PricingCard({ badge, badgeColor, title, price, subPrice, features, ctaL
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div style={{
+    <div className="pricing-card-inner" style={{
       background: hovered ? '#181828' : '#111',
       border: hovered ? '1px solid #0F52BA' : '1px solid rgba(255,255,255,0.08)',
       borderRadius: 20, padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: 0,
@@ -73,8 +73,8 @@ function PricingCard({ badge, badgeColor, title, price, subPrice, features, ctaL
 
 export default function MegaPricing() {
   return (
-    <section id="pricing" style={{ background: '#111', padding: '100px 0' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
+    <section id="pricing" className="section-pad" style={{ background: '#111', padding: '100px 0' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
           SIMPLE PRICING. SERIOUS RESULTS.

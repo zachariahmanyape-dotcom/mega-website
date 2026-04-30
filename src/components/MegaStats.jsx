@@ -9,8 +9,8 @@ const statCards = [
 
 export default function MegaStats() {
   return (
-    <section id="statistics" style={{ background: '#111', padding: '100px 0' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }}>
+    <section id="statistics" className="section-pad" style={{ background: '#111', padding: '100px 0' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px, 4vw, 54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
           THE NUMBERS DON'T LIE.
@@ -23,7 +23,7 @@ export default function MegaStats() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}
           className="stats-grid">
           {statCards.map((card, i) => (
-            <div key={i} style={{
+            <div key={i} className="stats-card" style={{
               background: '#0A0A0A', border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: 16, padding: '36px 32px',
               transition: 'all 0.2s ease', cursor: 'default',

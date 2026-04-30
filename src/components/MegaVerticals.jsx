@@ -26,9 +26,9 @@ export default function MegaVerticals() {
   const accentColor = isMentorship ? '#A3E4DB' : '#FF6B6B';
 
   return (
-    <section id="verticals" style={{ background: '#0A0A0A', padding: '100px 0',
+    <section id="verticals" className="section-pad" style={{ background: '#0A0A0A', padding: '100px 0',
       borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="inner-container">
 
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(28px, 4vw, 44px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 48 }}>
@@ -36,7 +36,7 @@ export default function MegaVerticals() {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 64 }}>
-          <div style={{
+          <div className="verticals-tab-container" style={{
             background: '#111', border: '1px solid rgba(255,255,255,0.12)',
             borderRadius: 999, padding: 5, display: 'flex', gap: 0,
             boxShadow: '0 4px 24px rgba(0,0,0,0.4)', position: 'relative',
@@ -44,16 +44,18 @@ export default function MegaVerticals() {
             {['mentorship', 'management'].map(tab => {
               const isActive = active === tab;
               return (
-                <button key={tab} onClick={() => switchTo(tab)} style={{
-                  background: isActive ? '#0F52BA' : 'transparent',
-                  color: isActive ? '#fff' : 'rgba(255,255,255,0.5)',
-                  border: 'none', borderRadius: 999,
-                  padding: '14px 36px', cursor: 'pointer',
-                  fontFamily: "'Bebas Neue', cursive",
-                  fontSize: 22, letterSpacing: 2,
-                  transition: 'all 0.3s ease',
-                  position: 'relative', overflow: 'hidden',
-                }}>
+                <button key={tab} onClick={() => switchTo(tab)}
+                  className="verticals-tab"
+                  style={{
+                    background: isActive ? '#0F52BA' : 'transparent',
+                    color: isActive ? '#fff' : 'rgba(255,255,255,0.5)',
+                    border: 'none', borderRadius: 999,
+                    padding: '14px 36px', cursor: 'pointer',
+                    fontFamily: "'Bebas Neue', cursive",
+                    fontSize: 22, letterSpacing: 2,
+                    transition: 'all 0.3s ease',
+                    position: 'relative', overflow: 'hidden',
+                  }}>
                   MEGA {tab === 'mentorship' ? 'Mentorship' : 'Management'}
                   {!isActive && (
                     <span style={{

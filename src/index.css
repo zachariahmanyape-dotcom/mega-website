@@ -20,10 +20,148 @@ body { background: #0A0A0A; color: #fff; overflow-x: hidden; }
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-  .nav-links-desktop { display: none !important; }
+/* ─── Hamburger button ─── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-left: 8px;
+  padding: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav dropdown */
+.nav-mobile-dropdown {
+  position: fixed;
+  top: 70px;
+  left: 16px;
+  right: 16px;
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 12px;
+  z-index: 999;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+}
+.nav-mobile-link {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.75);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.15s, color 0.15s;
+  letter-spacing: 0.3px;
+  min-height: 44px;
+}
+.nav-mobile-link:active { background: rgba(255,255,255,0.07); color: #fff; }
+.nav-mobile-cta {
+  display: block;
+  background: #0F52BA;
+  color: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+  min-height: 44px;
 }
 
+@media (min-width: 769px) {
+  .nav-mobile-dropdown { display: none !important; }
+}
+
+/* ─── 768px — primary mobile breakpoint ─── */
+@media (max-width: 768px) {
+  .nav-links-desktop { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+  .nav-cta { padding: 10px 18px !important; min-height: 44px !important; }
+
+  /* Section vertical padding */
+  .section-pad { padding-top: 64px !important; padding-bottom: 64px !important; }
+
+  /* Inner containers — reduce horizontal padding from 40px to 20px */
+  .inner-container { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* Hero */
+  .hero-section { padding: 90px 0 56px !important; }
+  .hero-grid { padding: 0 20px !important; gap: 40px !important; }
+  .hero-title-line { width: 100% !important; font-size: clamp(32px, 9.5vw, 65px) !important; }
+  .hero-stat-container { height: 240px !important; }
+  .hero-stat-card { padding: 28px 24px !important; }
+  .hero-cta-btn { min-height: 44px !important; }
+
+  /* Verticals tab toggle */
+  .verticals-tab-container {
+    border-radius: 14px !important;
+    flex-direction: column !important;
+    width: 100%;
+    max-width: 340px;
+  }
+  .verticals-tab {
+    font-size: 18px !important;
+    padding: 14px 20px !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  /* Stats cards */
+  .stats-card { padding: 24px 20px !important; }
+
+  /* Personas */
+  .personas-content-card { padding: 28px 20px !important; }
+  .persona-btn { min-height: 44px !important; }
+
+  /* Subjects fade edges */
+  .subjects-fade { width: 60px !important; }
+
+  /* Vantage — hide browser mock on mobile */
+  .vantage-browser-frame { display: none !important; }
+
+  /* Pricing cards */
+  .pricing-card-inner { padding: 28px 20px !important; }
+
+  /* FAQ — clip horizontal entrance animations */
+  .faq-section { overflow: hidden !important; }
+  .faq-answer { padding-right: 20px !important; }
+
+  /* Footer bottom bar */
+  .footer-bottom { padding-left: 20px !important; padding-right: 20px !important; }
+}
+
+/* ─── 900px — tablet grid stacking ─── */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
   .about-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
@@ -35,7 +173,11 @@ body { background: #0A0A0A; color: #fff; overflow-x: hidden; }
   .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
 }
 
+/* ─── 500px — compact single-column ─── */
 @media (max-width: 500px) {
   .stats-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
+  .about-metrics { grid-template-columns: 1fr !important; }
+  .hero-title-line { font-size: clamp(28px, 8.5vw, 50px) !important; }
+  .verticals-tab { font-size: 16px !important; }
 }

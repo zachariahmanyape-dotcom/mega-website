@@ -34,8 +34,8 @@ export default function MegaSubjects() {
   }, [paused]);
 
   return (
-    <section id="subject-areas" style={{ background: '#161616', padding: '100px 0', overflow: 'hidden' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px', marginBottom: 56 }}>
+    <section id="subject-areas" className="section-pad" style={{ background: '#161616', padding: '100px 0', overflow: 'hidden' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px', marginBottom: 56 }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
           WHAT YOU'LL LEARN.
@@ -50,9 +50,9 @@ export default function MegaSubjects() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}>
 
-        <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 120,
+        <div className="subjects-fade" style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 120,
           background: 'linear-gradient(to right, #161616, transparent)', zIndex: 2, pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: 120,
+        <div className="subjects-fade" style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: 120,
           background: 'linear-gradient(to left, #161616, transparent)', zIndex: 2, pointerEvents: 'none' }} />
 
         <div ref={stripRef} style={{ display: 'flex', gap: 24, width: 'max-content', willChange: 'transform' }}>

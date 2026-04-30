@@ -36,8 +36,8 @@ export default function MegaPersonas() {
   };
 
   return (
-    <section id="who-mega-is-for" style={{ background: '#0A0A0A', padding: '100px 0' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
+    <section id="who-mega-is-for" className="section-pad" style={{ background: '#0A0A0A', padding: '100px 0' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
           MEGA IS BUILT FOR YOU.
@@ -62,14 +62,16 @@ export default function MegaPersonas() {
                   {group.items.map(item => {
                     const isActive = selected === item.id;
                     return (
-                      <button key={item.id} onClick={() => selectPersona(item.id)} style={{
-                        background: isActive ? '#0F52BA' : 'rgba(255,255,255,0.06)',
-                        color: isActive ? '#fff' : 'rgba(255,255,255,0.6)',
-                        border: isActive ? '1px solid #0F52BA' : '1px solid rgba(255,255,255,0.12)',
-                        borderRadius: 999, padding: '10px 20px',
-                        fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600,
-                        cursor: 'pointer', transition: 'all 0.2s ease', letterSpacing: 0.3,
-                      }}
+                      <button key={item.id} onClick={() => selectPersona(item.id)}
+                        className="persona-btn"
+                        style={{
+                          background: isActive ? '#0F52BA' : 'rgba(255,255,255,0.06)',
+                          color: isActive ? '#fff' : 'rgba(255,255,255,0.6)',
+                          border: isActive ? '1px solid #0F52BA' : '1px solid rgba(255,255,255,0.12)',
+                          borderRadius: 999, padding: '10px 20px',
+                          fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600,
+                          cursor: 'pointer', transition: 'all 0.2s ease', letterSpacing: 0.3,
+                        }}
                         onMouseEnter={e => { if (!isActive) { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = '#fff'; } }}
                         onMouseLeave={e => { if (!isActive) { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.color = 'rgba(255,255,255,0.6)'; } }}>
                         {item.label}
@@ -81,7 +83,7 @@ export default function MegaPersonas() {
             ))}
           </div>
 
-          <div style={{
+          <div className="personas-content-card" style={{
             background: '#111', border: '1px solid rgba(255,255,255,0.08)',
             borderRadius: 20, padding: '44px 40px',
             opacity: fading ? 0 : 1, transform: fading ? 'translateY(8px)' : 'translateY(0)',

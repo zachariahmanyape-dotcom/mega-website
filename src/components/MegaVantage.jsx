@@ -47,9 +47,9 @@ export default function MegaVantage() {
   };
 
   return (
-    <section id="vantage" style={{ background: '#0A0A0A', padding: '100px 0',
+    <section id="vantage" className="section-pad" style={{ background: '#0A0A0A', padding: '100px 0',
       borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }} className="inner-container">
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.25fr', gap: 64, alignItems: 'start' }}
           className="vantage-grid">
@@ -99,8 +99,8 @@ export default function MegaVantage() {
             </div>
           </div>
 
-          {/* Right — browser frame */}
-          <div>
+          {/* Right — browser frame (hidden on mobile via CSS) */}
+          <div className="vantage-browser-frame">
             <div style={{
               background: '#1a1a2e', borderRadius: 12,
               boxShadow: '0 36px 90px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.08)',

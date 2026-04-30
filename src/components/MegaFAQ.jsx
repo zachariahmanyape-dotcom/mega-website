@@ -74,7 +74,7 @@ function FAQItem({ item, index, isOpen, onToggle }) {
         maxHeight: isOpen ? 300 : 0, overflow: 'hidden',
         transition: 'max-height 0.35s cubic-bezier(0.4,0,0.2,1)',
       }}>
-        <div style={{
+        <div className="faq-answer" style={{
           fontFamily: "'Montserrat', sans-serif", fontSize: 14,
           color: 'rgba(255,255,255,0.6)', lineHeight: 1.8,
           paddingBottom: 24, paddingRight: 48,
@@ -89,8 +89,8 @@ export default function MegaFAQ() {
   const toggle = (i) => setOpenIdx(prev => prev === i ? null : i);
 
   return (
-    <section id="faq" style={{ background: '#111', padding: '100px 0 0', position: 'relative' }}>
-      <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 40px' }}>
+    <section id="faq" className="faq-section" style={{ background: '#111', padding: '100px 0 0', position: 'relative' }}>
+      <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
           FREQUENTLY ASKED QUESTIONS.

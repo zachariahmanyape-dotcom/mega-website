@@ -6,7 +6,7 @@ export default function MegaFooter() {
 
   return (
     <footer id="footer" style={{ background: '#0A0A0A', padding: '80px 0 0', overflow: 'hidden' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }} className="inner-container">
 
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1.5fr 1.5fr', gap: 48, marginBottom: 80 }}
           className="footer-grid">
@@ -121,7 +121,7 @@ export default function MegaFooter() {
         </div>
       </div>
 
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 40px',
+      <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 40px',
         display: 'flex', justifyContent: 'center' }}>
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12,
           color: 'rgba(255,255,255,0.25)' }}>
