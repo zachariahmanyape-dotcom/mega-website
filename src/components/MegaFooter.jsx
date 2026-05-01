@@ -91,7 +91,7 @@ export default function MegaFooter() {
               color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
               Take the first step today.
             </div>
-            <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://tally.so/r/wkjYEe" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-block', background: '#0F52BA', color: '#fff',
               borderRadius: 999, padding: '12px 28px',
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,

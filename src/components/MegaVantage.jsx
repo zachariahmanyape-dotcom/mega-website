@@ -152,7 +152,7 @@ export default function MegaVantage() {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 64 }}>
-          <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://tally.so/r/wkjYEe" target="_blank" rel="noopener noreferrer" style={{
             background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,0.4)',
             borderRadius: 999, padding: '14px 40px',
             fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,

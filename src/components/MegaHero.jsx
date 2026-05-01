@@ -53,7 +53,7 @@ export default function MegaHero() {
             from day one.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer"
+            <a href="https://tally.so/r/wkjYEe" target="_blank" rel="noopener noreferrer"
               className="hero-cta-btn"
               style={{
                 background: '#0F52BA', color: '#fff', borderRadius: 999, padding: '14px 32px',

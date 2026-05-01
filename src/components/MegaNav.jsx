@@ -79,7 +79,7 @@ export default function MegaNav() {
           ))}
         </div>
 
-        <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer"
+        <a href="https://tally.so/r/wkjYEe" target="_blank" rel="noopener noreferrer"
           className="nav-cta"
           style={{
             background: COBALT, color: '#fff', borderRadius: 999,
@@ -116,7 +116,7 @@ export default function MegaNav() {
               </button>
             ))}
             <a
-              href="https://tally.so/r/MEGA"
+              href="https://tally.so/r/wkjYEe"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-mobile-cta"

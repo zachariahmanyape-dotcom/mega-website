@@ -47,7 +47,7 @@ function PricingCard({ badge, badgeColor, title, price, subPrice, features, ctaL
         ))}
       </div>
 
-      <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer" style={{
+      <a href="https://tally.so/r/wkjYEe" target="_blank" rel="noopener noreferrer" style={{
         display: 'block', textAlign: 'center', borderRadius: 999,
         padding: '14px 28px', fontFamily: "'Montserrat', sans-serif",
         fontWeight: 700, fontSize: 14, textDecoration: 'none', letterSpacing: 0.5,

@@ -101,7 +101,7 @@ export default function MegaVerticals() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: 48 }}>
-            <a href="https://tally.so/r/MEGA" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://tally.so/r/wkjYEe" target="_blank" rel="noopener noreferrer" style={{
               background: '#0F52BA', color: '#fff', borderRadius: 999, padding: '14px 40px',
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
               textDecoration: 'none', letterSpacing: 0.5, transition: 'all 0.2s',
