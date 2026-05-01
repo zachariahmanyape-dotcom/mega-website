@@ -38,7 +38,7 @@ export default function MegaSubjects() {
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px', marginBottom: 56 }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
-          WHAT YOU'LL LEARN.
+          WHAT YOU'LL LEARN
         </div>
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16,
           color: 'rgba(255,255,255,0.5)', textAlign: 'center' }}>

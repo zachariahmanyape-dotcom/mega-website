@@ -93,7 +93,7 @@ export default function MegaFAQ() {
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
-          FREQUENTLY ASKED QUESTIONS.
+          FREQUENTLY ASKED QUESTIONS
         </div>
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16,
           color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 60 }}>

@@ -67,7 +67,7 @@ export default function MegaAbout() {
           </div>
           <h2 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(36px, 4vw, 54px)',
             color: '#fff', lineHeight: 1.05, letterSpacing: 1, marginBottom: 28 }}>
-            Most people are capable. Few are guided.{'\n'}MEGA changes that.
+            Most people are capable. Few are guided.{'\n'}MEGA changes that
           </h2>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15,
             color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 0 }}>

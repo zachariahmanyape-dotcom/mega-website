@@ -77,7 +77,7 @@ export default function MegaPricing() {
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
-          SIMPLE PRICING. SERIOUS RESULTS.
+          SIMPLE PRICING. SERIOUS RESULTS
         </div>
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16,
           color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 72 }}>

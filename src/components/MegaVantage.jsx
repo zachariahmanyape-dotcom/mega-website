@@ -62,7 +62,7 @@ export default function MegaVantage() {
             </div>
             <h2 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,48px)',
               color: '#fff', lineHeight: 1.05, letterSpacing: 1.5, marginBottom: 36 }}>
-              THE PLATFORM THAT POWERS YOUR GROWTH.
+              THE PLATFORM THAT POWERS YOUR GROWTH
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               {VANTAGE_FEATURES.map((f, i) => {

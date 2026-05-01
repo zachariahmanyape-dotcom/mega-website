@@ -37,7 +37,7 @@ export default function MegaHero() {
           }}>
             <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>CLOSE THE DISTANCE</span>
             <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>BETWEEN YOU AND</span>
-            <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>YOUR POTENTIAL<span style={{ color: '#0F52BA' }}>.</span></span>
+            <span className="hero-title-line" style={{ display: 'block', width: '700px', fontSize: '75px' }}>YOUR POTENTIAL</span>
           </h1>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: 'rgba(255,255,255,0.65)',
             lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>

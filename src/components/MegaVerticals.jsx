@@ -32,7 +32,7 @@ export default function MegaVerticals() {
 
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(28px, 4vw, 44px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 48 }}>
-          TWO VERTICALS. ONE MISSION.
+          TWO VERTICALS. ONE MISSION
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 64 }}>
@@ -77,8 +77,8 @@ export default function MegaVerticals() {
             color: '#fff', textAlign: 'center', lineHeight: 1.1, letterSpacing: 1.5,
             marginBottom: 48, maxWidth: 800, margin: '0 auto 48px' }}>
             {isMentorship
-              ? 'BUILT FOR STUDENTS AND YOUNG PROFESSIONALS WHO ARE READY TO GROW.'
-              : 'BUILT FOR ORGANIZATIONS THAT NEED THEIR PEOPLE PERFORMING FROM DAY ONE.'}
+              ? 'BUILT FOR STUDENTS AND YOUNG PROFESSIONALS WHO ARE READY TO GROW'
+              : 'BUILT FOR ORGANIZATIONS THAT NEED THEIR PEOPLE PERFORMING FROM DAY ONE'}
           </h3>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28 }}

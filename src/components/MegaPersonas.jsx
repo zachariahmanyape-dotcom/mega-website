@@ -40,7 +40,7 @@ export default function MegaPersonas() {
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="inner-container">
         <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(32px,4vw,54px)',
           color: '#fff', textAlign: 'center', letterSpacing: 2, marginBottom: 16 }}>
-          MEGA IS BUILT FOR YOU.
+          MEGA IS BUILT FOR YOU
         </div>
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16,
           color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 56 }}>
