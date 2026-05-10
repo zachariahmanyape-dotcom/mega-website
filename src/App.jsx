@@ -4,6 +4,7 @@ import MegaHero from './components/MegaHero';
 import MegaAbout from './components/MegaAbout';
 import MegaVerticals from './components/MegaVerticals';
 import MegaStats from './components/MegaStats';
+import MegaTools from './components/MegaTools';
 import MegaPersonas from './components/MegaPersonas';
 import MegaSubjects from './components/MegaSubjects';
 import MegaVantage from './components/MegaVantage';
@@ -32,6 +33,7 @@ export default function App() {
       <div className="reveal"><MegaAbout /></div>
       <div className="reveal"><MegaVerticals /></div>
       <div className="reveal"><MegaStats /></div>
+      <div className="reveal"><MegaTools /></div>
       <div className="reveal"><MegaPersonas /></div>
       <div className="reveal"><MegaSubjects /></div>
       <div className="reveal"><MegaVantage /></div>
