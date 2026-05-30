@@ -41,6 +41,8 @@
       '.vd-root button { font-family: inherit; cursor: pointer; border: 0; color: inherit; }',
       '.vd-h { font-family: "Bebas Neue", sans-serif; letter-spacing: 1.2px; color: #fff; }',
       '.vd-frame { max-width: 1080px; margin: 0 auto; background: ' + T.bg + '; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 1px ' + T.border + '; }',
+      '.vd-caption { max-width: 880px; margin: 20px auto 0; text-align: center; color: ' + T.muted + '; font-size: 13px; line-height: 1.55; padding: 0 16px; transition: opacity .2s; }',
+      '.vd-caption strong { color: #fff; font-weight: 600; margin-right: 4px; }',
       '.vd-chrome { display:flex; align-items:center; gap:8px; padding:9px 14px; background:#0a0c14; border-bottom:1px solid ' + T.border + '; }',
       '.vd-dot { width:11px; height:11px; border-radius:50%; }',
       '.vd-url { flex:1; text-align:center; font-size:11px; color:' + T.muted + '; background:rgba(255,255,255,.04); border:1px solid ' + T.border + '; border-radius:6px; padding:3px 12px; max-width:340px; margin:0 auto; }',
@@ -295,7 +297,9 @@
     var state = createState();
     var root = el('div', { class: 'vd-root' });
     var frame = el('div', { class: 'vd-frame' });
+    var caption = el('div', { class: 'vd-caption' });
     root.appendChild(frame);
+    root.appendChild(caption);
     container.appendChild(root);
 
     frame.appendChild(el('div', { class: 'vd-chrome' }, [
@@ -325,6 +329,17 @@
       { id: 'chat', icon: ICONS.chat, label: 'Chat' },
       { id: 'profile', icon: ICONS.profile, label: 'Profile' }
     ];
+
+    var captions = {
+      dashboard: ['Personal Dashboard', "Your command center for streaks, weekly activity, and what's due next — all in one view."],
+      tasks: ['Tasks & Goals', 'Turn your growth plan into weekly tasks with priorities, due dates, and XP for every win.'],
+      sessions: ['Sessions', 'Every 1:1 and town hall in one calendar — with reminders so you never miss a session.'],
+      roadmap: ['Roadmap', 'A phase-by-phase plan toward your big goal, so you always know what to ship next.'],
+      wins: ['Wins Board', 'Share your progress and celebrate others — momentum is contagious here.'],
+      resources: ['Resource Library', 'Templates, frameworks, and guides curated by mentors — organised and always available.'],
+      chat: ['Chat', 'Channels and direct messages with your cohort and mentors, in one place.'],
+      profile: ['Profile & Achievements', 'Your full learning record: XP, streaks, badges, and milestones earned along the way.']
+    };
 
     function renderNav() {
       sidebar.innerHTML = '';
@@ -1470,6 +1485,9 @@
       }
       mainArea.appendChild(view);
       mainArea.scrollTop = 0;
+
+      var cap = captions[state.view] || captions.dashboard;
+      caption.innerHTML = '<strong>' + cap[0] + ' —</strong>' + cap[1];
     }
 
     renderAll();
