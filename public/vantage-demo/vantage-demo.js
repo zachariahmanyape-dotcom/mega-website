@@ -197,32 +197,63 @@
       taskFilter: 'today',
       pastSessionsOpen: false,
       tasks: [
-        { id: 't1', title: 'Draft elevator pitch', subject: 'Personal Branding', priority: 'Important', due: 'Today · 6:00 PM', xp: 120, done: false, expanded: false,
+        { id: 't1', dueBucket: 'today', title: 'Draft elevator pitch', subject: 'Personal Branding', priority: 'Important', due: 'Today · 6:00 PM', xp: 120, done: false, expanded: false,
           desc: 'Write a 60-second pitch covering who you are, what you do, and what you want next.',
           subs: [
             { title: 'Outline 3 key value propositions', done: true, ai: false },
             { title: 'Generate hook variants with AI', done: false, ai: true },
             { title: 'Record a practice run on video', done: false, ai: false }
           ]},
-        { id: 't2', title: 'Weekly reflection journal', subject: 'Growth Mindset', priority: 'Routine', due: 'Today · 9:00 PM', xp: 80, done: false, expanded: false,
+        { id: 't2', dueBucket: 'today', title: 'Weekly reflection journal', subject: 'Growth Mindset', priority: 'Routine', due: 'Today · 9:00 PM', xp: 80, done: false, expanded: false,
           desc: 'Capture wins, friction points, and one intention for next week.',
           subs: [
             { title: 'Three wins of the week', done: false, ai: false },
             { title: 'Two friction points', done: false, ai: false },
             { title: 'One clear intention for next week', done: false, ai: false }
           ]},
-        { id: 't3', title: 'Complete LinkedIn profile', subject: 'Career Dev', priority: 'Important', due: 'Tomorrow · 5:00 PM', xp: 60, done: false, expanded: false,
+        { id: 't3', dueBucket: 'tomorrow', title: 'Complete LinkedIn profile', subject: 'Career Dev', priority: 'Important', due: 'Tomorrow · 5:00 PM', xp: 60, done: false, expanded: false,
           desc: 'Polish your headline, featured section, and About summary.',
           subs: [
             { title: 'Update headline & banner', done: true, ai: false },
             { title: 'Add 2 featured projects', done: false, ai: false },
             { title: 'AI-rewrite About section', done: false, ai: true }
+          ]},
+        { id: 't4', dueBucket: 'week', title: 'Prepare interview talking points', subject: 'Career Dev', priority: 'Important', due: 'Thu · 3:00 PM', xp: 100, done: false, expanded: false,
+          desc: 'Build a one-pager covering background, results, and the 3 questions you want to ask.',
+          subs: [
+            { title: 'List 3 strongest result stories', done: false, ai: false },
+            { title: 'Draft 3 questions to ask the hiring manager', done: false, ai: false },
+            { title: 'Mock interview with mentor', done: false, ai: false }
+          ]},
+        { id: 't5', dueBucket: 'week', title: 'Outreach to 5 alumni', subject: 'Networking', priority: 'Routine', due: 'Fri · End of day', xp: 70, done: false, expanded: false,
+          desc: 'Send 5 personalised messages to alumni working in marketing in the UAE.',
+          subs: [
+            { title: 'Shortlist 5 alumni from LinkedIn', done: true, ai: false },
+            { title: 'Personalise opening line for each', done: false, ai: true },
+            { title: 'Send and log responses', done: false, ai: false }
+          ]},
+        { id: 't6', dueBucket: 'later', title: 'Update portfolio site', subject: 'Personal Branding', priority: 'Routine', due: 'Next Wed', xp: 90, done: false, expanded: false,
+          desc: 'Refresh the homepage with the latest 2 case studies and a new About blurb.',
+          subs: [
+            { title: 'Write fresh About paragraph', done: false, ai: false },
+            { title: 'Add 2 most recent case studies', done: false, ai: false },
+            { title: 'Compress images and re-deploy', done: false, ai: false }
+          ]},
+        { id: 't7', dueBucket: 'later', title: 'Plan Q3 OKRs', subject: 'Strategy', priority: 'Important', due: 'Next Fri', xp: 110, done: false, expanded: false,
+          desc: 'Define 1 objective and 3 measurable key results for the next quarter.',
+          subs: [
+            { title: 'Pick one focus objective', done: false, ai: false },
+            { title: 'Write 3 measurable key results', done: false, ai: false },
+            { title: 'Share draft with mentor for feedback', done: false, ai: false }
           ]}
       ],
       wins: [
-        { author: 'Leilani K.', role: 'Foundations · member', plan: null, time: '2h ago', text: 'Landed my first freelance client! The outreach scripts actually work 🎉', tag: 'Career Dev', reactions: { up: 6, fire: 4, clap: 3, star: 2 } },
-        { author: 'Rami A.', role: 'Foundations · member', plan: null, time: '6h ago', text: 'Hit 14-day streak today. Consistency is starting to feel automatic.', tag: 'Habit Tracking', reactions: { up: 4, fire: 7, clap: 2, star: 1 } },
-        { author: 'Zach', role: 'Founder, MEGA', plan: 'MEGA', time: '1d ago', text: 'Just shipped the new Pomodoro + focus metrics on the dashboard. Try it out and tell me what to fix.', tag: null, reactions: { up: 11, fire: 9, clap: 5, star: 4 } }
+        { author: 'Leilani K.', role: 'Foundations · member · 1,820 XP', plan: null, time: '2h ago', text: 'Landed my first freelance client today! The outreach scripts actually work — sent 12 messages, got 3 replies, signed one. 🎉', tag: 'Career Dev', reactions: { up: 14, fire: 9, clap: 6, star: 4 } },
+        { author: 'Rami A.', role: 'Foundations · member · 1,150 XP', plan: null, time: '6h ago', text: 'Hit a 14-day focus streak today. Consistency is starting to feel automatic, not forced.', tag: 'Habit Tracking', reactions: { up: 8, fire: 17, clap: 4, star: 2 } },
+        { author: 'Zach', role: 'Founder, MEGA', plan: 'MEGA', time: '1d ago', text: 'Just shipped the new Pomodoro + focus metrics on the dashboard. Try it out and tell me what to fix 👇', tag: null, reactions: { up: 22, fire: 15, clap: 11, star: 7 } },
+        { author: 'Amira Malik', role: 'Foundations · member · 2,340 XP', plan: null, time: '2d ago', text: 'Booked an interview at a Dubai marketing agency for next Tuesday 🙌 The CV template + last week\'s 1:1 review made the difference.', tag: 'Career Dev', reactions: { up: 19, fire: 12, clap: 8, star: 5 } },
+        { author: 'Yusuf O.', role: 'Foundations · member · 980 XP', plan: null, time: '3d ago', text: 'Finished the Time Blocking module. Already getting 3 deep-work hours in before noon and it feels unreal.', tag: 'Time Management', reactions: { up: 11, fire: 6, clap: 4, star: 2 } },
+        { author: 'Sara K.', role: 'Foundations · member · 1,560 XP', plan: null, time: '4d ago', text: 'First public speaking attempt at uni this morning — terrified the whole time but I did it. Rewatching the recording with mentor next session.', tag: 'Communication', reactions: { up: 16, fire: 9, clap: 13, star: 4 } }
       ],
       timer: { seconds: 25 * 60, running: false, interval: null },
       badgeModalOpen: false,
@@ -565,7 +596,7 @@
         ]),
         el('div', { style: 'display:flex;gap:6px;align-items:center;flex-wrap:wrap;' }, [
           el('div', { style: 'display:flex;gap:4px;background:' + T.card + ';padding:4px;border-radius:10px;' }, ['tasks','goals','metrics'].map(function (id) {
-            var label = id === 'tasks' ? 'Tasks (15)' : id === 'goals' ? 'Goals (2)' : 'Focus Metrics';
+            var label = id === 'tasks' ? 'Tasks (' + state.tasks.length + ')' : id === 'goals' ? 'Goals (2)' : 'Focus Metrics';
             return el('button', {
               class: 'vd-subtab' + (state.taskSubTab === id ? ' active' : ''),
               onclick: function () { state.taskSubTab = id; renderAll(); }
@@ -582,16 +613,34 @@
     }
     function renderTasksTab() {
       var wrap = el('div');
+      function matches(t, bucket) {
+        if (bucket === 'all') return true;
+        if (bucket === 'today') return t.dueBucket === 'today';
+        if (bucket === 'tomorrow') return t.dueBucket === 'tomorrow';
+        if (bucket === 'week') return ['today','tomorrow','week'].indexOf(t.dueBucket) >= 0;
+        return true;
+      }
+      var counts = {
+        today: state.tasks.filter(function (t) { return matches(t, 'today'); }).length,
+        tomorrow: state.tasks.filter(function (t) { return matches(t, 'tomorrow'); }).length,
+        week: state.tasks.filter(function (t) { return matches(t, 'week'); }).length,
+        all: state.tasks.length
+      };
       var filters = el('div', { style: 'display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;' });
-      [['today','Today (2)'],['tomorrow','Tomorrow (1)'],['week','Next 7 days (4)'],['all','All (15)']].forEach(function (f) {
+      [['today','Today'],['tomorrow','Tomorrow'],['week','Next 7 days'],['all','All']].forEach(function (f) {
         filters.appendChild(el('button', {
           class: 'vd-subtab' + (state.taskFilter === f[0] ? ' active' : ''),
           onclick: function () { state.taskFilter = f[0]; renderAll(); }
-        }, f[1]));
+        }, f[1] + ' (' + counts[f[0]] + ')'));
       });
       wrap.appendChild(filters);
 
-      state.tasks.forEach(function (t) {
+      var visible = state.tasks.filter(function (t) { return matches(t, state.taskFilter); });
+      if (visible.length === 0) {
+        wrap.appendChild(el('div', { class: 'vd-card', style: 'text-align:center;padding:32px 16px;color:' + T.muted + ';font-size:12px;' }, 'No tasks in this bucket. Time to relax — or get ahead.'));
+        return wrap;
+      }
+      visible.forEach(function (t) {
         var rowEl = el('div', { class: 'vd-card', style: 'padding:0;margin-bottom:8px;' });
         var row = el('div', {
           class: 'vd-row' + (t.done ? ' done' : ''),
@@ -686,20 +735,177 @@
     }
     function renderMetricsTab() {
       var wrap = el('div');
-      var stats = el('div', { class: 'vd-grid cols-3', style: 'grid-template-columns:repeat(3,1fr);margin-bottom:14px;' });
-      [['Total Focus Time', '4h 20m', T.sapphire],['Sessions This Week', '6', T.teal],['Longest Streak', '3h', T.coral]].forEach(function (s) {
-        stats.appendChild(el('div', { class: 'vd-card', style: 'text-align:center;border-top:2px solid ' + s[2] + ';' }, [
-          el('div', { class: 'vd-eyebrow', style: 'margin-bottom:6px;' }, s[0]),
-          el('div', { class: 'vd-h', style: 'font-size:28px;color:#fff;' }, s[1])
+
+      // Top 4 stat tiles
+      var topStats = el('div', { class: 'vd-grid cols-4', style: 'grid-template-columns:repeat(4,1fr);margin-bottom:14px;' });
+      [
+        { label: 'TODAY', value: '1h 45m', sub: '3 sessions' },
+        { label: 'THIS WEEK', value: '4h 20m', sub: '6 sessions' },
+        { label: 'TOTAL FOCUS', value: '87h 12m', sub: '' },
+        { label: 'SESSIONS', value: '142', sub: 'all time' }
+      ].forEach(function (s) {
+        topStats.appendChild(el('div', { class: 'vd-card' }, [
+          el('div', { class: 'vd-eyebrow', style: 'margin-bottom:6px;' }, s.label),
+          el('div', { style: 'display:flex;align-items:baseline;gap:6px;' }, [
+            el('div', { class: 'vd-h', style: 'font-size:24px;color:#fff;' }, s.value),
+            s.sub ? el('div', { style: 'font-size:10px;color:' + T.muted + ';' }, s.sub) : null
+          ])
         ]));
       });
-      wrap.appendChild(stats);
-      wrap.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:8px;' }, 'Activity heatmap'));
-      var heat = el('div', { style: 'display:grid;grid-template-columns:repeat(14,1fr);gap:4px;max-width:420px;' });
-      [0.2,0.6,0.8,0.3,1,0.5,0.1,0.4,0.7,0.9,0.2,0.6,0.3,0.5,0.1,0.8,0.5,0.3,0.7,0.2,0.4,0.6,0.9,0.5,0.3,0.7,0.4,0.2].forEach(function (p) {
-        heat.appendChild(el('div', { style: 'aspect-ratio:1;border-radius:3px;background:rgba(26,63,165,' + p + ');' }));
+      wrap.appendChild(topStats);
+
+      // Last 7 days + By Subject split
+      var row1 = el('div', { class: 'vd-grid split', style: 'grid-template-columns:1.4fr 1fr;margin-bottom:14px;' });
+
+      var l7 = el('div', { class: 'vd-card' });
+      l7.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:2px;' }, 'FOCUS · LAST 7 DAYS'));
+      l7.appendChild(el('div', { style: 'font-size:11px;color:' + T.muted + ';margin-bottom:14px;' }, [
+        document.createTextNode('Daily average '),
+        el('span', { style: 'color:#fff;font-weight:700;' }, '37m')
+      ]));
+      var dLabels = ['S','M','T','W','T','F','S'];
+      var dHeights = [40, 90, 55, 70, 30, 85, 50];
+      var dBars = el('div', { style: 'display:flex;gap:8px;align-items:flex-end;height:130px;' });
+      dLabels.forEach(function (d, i) {
+        var isToday = i === 6;
+        dBars.appendChild(el('div', { style: 'flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end;' }, [
+          el('div', { style: 'width:100%;height:' + dHeights[i] + 'px;background:' + (isToday ? T.sapphire : 'rgba(26,63,165,.35)') + ';border-radius:5px 5px 0 0;' }),
+          el('div', { style: 'font-size:10px;color:' + (isToday ? '#fff' : T.muted) + ';font-weight:' + (isToday ? 600 : 400) + ';' }, d)
+        ]));
       });
-      wrap.appendChild(heat);
+      l7.appendChild(dBars);
+      row1.appendChild(l7);
+
+      var subj = el('div', { class: 'vd-card' });
+      subj.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:12px;' }, 'BY SUBJECT · ALL TIME'));
+      [
+        { name: 'Personal Branding', hours: '22h 14m', pct: 100 },
+        { name: 'Career Dev', hours: '18h 02m', pct: 81 },
+        { name: 'Time Management', hours: '14h 30m', pct: 65 },
+        { name: 'Communication', hours: '11h 45m', pct: 53 },
+        { name: 'Growth Mindset', hours: '9h 18m', pct: 42 },
+        { name: 'Strategy', hours: '6h 23m', pct: 29 }
+      ].forEach(function (s) {
+        subj.appendChild(el('div', { style: 'margin-bottom:10px;' }, [
+          el('div', { style: 'display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;' }, [
+            el('div', { style: 'color:#fff;font-weight:500;' }, s.name),
+            el('div', { style: 'color:' + T.muted + ';' }, s.hours)
+          ]),
+          (function () { var b = el('div', { class: 'vd-bar' }); b.appendChild(el('div', { style: 'width:' + s.pct + '%;' })); return b; })()
+        ]));
+      });
+      row1.appendChild(subj);
+      wrap.appendChild(row1);
+
+      // Most focused time of day + Weekly rhythm
+      var row2 = el('div', { class: 'vd-grid split', style: 'grid-template-columns:1fr 1fr;margin-bottom:14px;' });
+
+      var tod = el('div', { class: 'vd-card' });
+      tod.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:14px;' }, 'MOST FOCUSED TIME OF DAY'));
+      var todHeights = [4,3,2,2,3,4,8,18,42,68,82,90,76,64,88,72,56,38,28,22,14,10,6,4];
+      var todMax = 90;
+      var todBars = el('div', { style: 'display:flex;gap:1px;align-items:flex-end;height:120px;' });
+      todHeights.forEach(function (h, i) {
+        todBars.appendChild(el('div', { style: 'flex:1;height:' + (h / todMax * 100) + '%;background:' + (h > 60 ? T.sapphire : 'rgba(26,63,165,.45)') + ';border-radius:2px 2px 0 0;min-height:2px;' }));
+      });
+      tod.appendChild(todBars);
+      tod.appendChild(el('div', { style: 'display:flex;justify-content:space-between;font-size:9px;color:' + T.muted + ';margin-top:6px;letter-spacing:.5px;' }, [
+        el('div', null, '12 AM'),
+        el('div', null, '6 AM'),
+        el('div', null, '12 PM'),
+        el('div', null, '6 PM'),
+        el('div', null, '11 PM')
+      ]));
+      row2.appendChild(tod);
+
+      var rhythm = el('div', { class: 'vd-card' });
+      rhythm.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:10px;' }, 'WEEKLY RHYTHM'));
+      var dayNames = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+      var rhythmRows = el('div', { style: 'display:flex;flex-direction:column;gap:3px;' });
+      // Realistic pattern: weekday mornings + early afternoons, lighter weekends
+      var rhythmPatterns = {
+        Mon: [0,0,0,0,0,0,0,0,.5,.8,.9,.7,.3,.6,.7,.4,.2,.1,0,0,0,0,0,0],
+        Tue: [0,0,0,0,0,0,0,.2,.6,.9,.8,.6,.2,.5,.8,.5,.3,.1,0,0,0,0,0,0],
+        Wed: [0,0,0,0,0,0,0,.1,.7,1,.9,.5,.2,.7,.9,.6,.2,0,0,0,0,0,0,0],
+        Thu: [0,0,0,0,0,0,0,0,.4,.7,.6,.4,.1,.4,.7,.5,.2,.1,0,0,0,0,0,0],
+        Fri: [0,0,0,0,0,0,0,.3,.8,.9,.7,.5,.2,.6,.8,.4,.1,0,0,0,0,0,0,0],
+        Sat: [0,0,0,0,0,0,0,0,.1,.3,.5,.6,.4,.2,.1,0,0,0,0,0,0,0,0,0],
+        Sun: [0,0,0,0,0,0,0,0,0,.2,.4,.3,.1,0,0,0,0,0,0,0,0,0,0,0]
+      };
+      dayNames.forEach(function (d) {
+        var rRow = el('div', { style: 'display:flex;gap:2px;align-items:center;' });
+        rRow.appendChild(el('div', { style: 'width:26px;font-size:9px;color:' + T.muted + ';' }, d));
+        rhythmPatterns[d].forEach(function (v) {
+          rRow.appendChild(el('div', { style: 'flex:1;aspect-ratio:1;border-radius:1px;background:' + (v > 0 ? 'rgba(26,63,165,' + (.25 + v * .75) + ')' : 'rgba(255,255,255,.04)') + ';' }));
+        });
+        rhythmRows.appendChild(rRow);
+      });
+      rhythm.appendChild(rhythmRows);
+      rhythm.appendChild(el('div', { style: 'font-size:9px;color:' + T.muted + ';margin-top:6px;padding-left:30px;' }, '12 AM → 11 PM'));
+      row2.appendChild(rhythm);
+      wrap.appendChild(row2);
+
+      // Focus in 2026 annual heatmap
+      var ann = el('div', { class: 'vd-card', style: 'margin-bottom:14px;' });
+      ann.appendChild(el('div', { style: 'display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;' }, [
+        el('div', { class: 'vd-eyebrow', style: 'margin:0;' }, 'FOCUS IN 2026'),
+        el('div', { style: 'display:flex;gap:6px;align-items:center;font-size:10px;color:' + T.muted + ';' }, [
+          document.createTextNode('Less'),
+          el('div', { style: 'display:flex;gap:3px;' }, [
+            el('div', { style: 'width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.05);' }),
+            el('div', { style: 'width:10px;height:10px;border-radius:2px;background:rgba(26,63,165,.35);' }),
+            el('div', { style: 'width:10px;height:10px;border-radius:2px;background:rgba(26,63,165,.6);' }),
+            el('div', { style: 'width:10px;height:10px;border-radius:2px;background:rgba(26,63,165,.85);' }),
+            el('div', { style: 'width:10px;height:10px;border-radius:2px;background:' + T.sapphire + ';' })
+          ]),
+          document.createTextNode('More')
+        ])
+      ]));
+      var weeks = 52;
+      var annGrid = el('div', { style: 'display:grid;grid-template-columns:repeat(' + weeks + ',1fr);grid-template-rows:repeat(7,1fr);gap:2px;grid-auto-flow:column;' });
+      // Deterministic pseudo-random pattern with higher density in recent months
+      function seedRand(n) { var x = Math.sin(n * 9301 + 49297) * 233280; return x - Math.floor(x); }
+      for (var w = 0; w < weeks; w++) {
+        for (var dd = 0; dd < 7; dd++) {
+          var r = seedRand(w * 7 + dd);
+          // weekends lighter
+          var isWeekend = dd >= 5;
+          // ramp up activity over the year
+          var weekFactor = w / weeks;
+          var intensity = r * (isWeekend ? 0.35 : 0.85) * (0.5 + weekFactor * 0.7);
+          var color;
+          if (intensity < 0.15) color = 'rgba(255,255,255,.05)';
+          else if (intensity < 0.35) color = 'rgba(26,63,165,.35)';
+          else if (intensity < 0.55) color = 'rgba(26,63,165,.6)';
+          else if (intensity < 0.75) color = 'rgba(26,63,165,.85)';
+          else color = T.sapphire;
+          annGrid.appendChild(el('div', { style: 'aspect-ratio:1;border-radius:2px;background:' + color + ';' }));
+        }
+      }
+      ann.appendChild(annGrid);
+      wrap.appendChild(ann);
+
+      // Focus records
+      var rec = el('div', { class: 'vd-card' });
+      rec.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:10px;' }, 'FOCUS RECORDS'));
+      [
+        { title: 'Draft elevator pitch', subject: 'Personal Branding', when: 'Today · 3:15 PM', dur: '50m' },
+        { title: 'LinkedIn rewrite', subject: 'Career Dev', when: 'Today · 11:02 AM', dur: '35m' },
+        { title: 'Reflection journal', subject: 'Growth Mindset', when: 'Yesterday · 9:40 PM', dur: '20m' },
+        { title: 'Interview prep', subject: 'Career Dev', when: 'Yesterday · 4:20 PM', dur: '1h 10m' },
+        { title: 'Time blocking review', subject: 'Time Management', when: '2 days ago · 8:15 AM', dur: '25m' }
+      ].forEach(function (r, i, arr) {
+        rec.appendChild(el('div', { style: 'display:flex;align-items:center;gap:12px;padding:9px 0;' + (i < arr.length-1 ? 'border-bottom:1px solid ' + T.border + ';' : '') }, [
+          el('div', { style: 'width:30px;height:30px;border-radius:8px;background:' + T.sapphireSoft + ';display:flex;align-items:center;justify-content:center;color:#A9C0F0;flex-shrink:0;', html: ICONS.cal }),
+          el('div', { style: 'flex:1;min-width:0;' }, [
+            el('div', { style: 'font-size:12px;font-weight:600;color:#fff;margin-bottom:2px;' }, r.title),
+            el('div', { style: 'font-size:10px;color:' + T.muted + ';' }, r.subject + ' · ' + r.when)
+          ]),
+          el('div', { style: 'font-size:12px;font-weight:700;color:#A9C0F0;' }, r.dur)
+        ]));
+      });
+      wrap.appendChild(rec);
+
       return wrap;
     }
 
@@ -907,7 +1113,7 @@
       var right = el('div', { style: 'display:flex;flex-direction:column;gap:10px;' });
       var stats = el('div', { class: 'vd-card' });
       stats.appendChild(el('div', { class: 'vd-eyebrow', style: 'margin-bottom:8px;' }, 'On the board'));
-      [['Wins shared', 3],['Subject areas', 4],['Community members', 214]].forEach(function (s, i, arr) {
+      [['Wins shared', state.wins.length],['Subject areas', 5],['Community members', 214]].forEach(function (s, i, arr) {
         stats.appendChild(el('div', { style: 'display:flex;justify-content:space-between;padding:6px 0;' + (i < arr.length-1 ? 'border-bottom:1px solid ' + T.border + ';' : '') }, [
           el('div', { style: 'font-size:11px;color:' + T.muted + ';' }, s[0]),
           el('div', { style: 'font-size:13px;font-weight:600;color:#fff;' }, s[1])

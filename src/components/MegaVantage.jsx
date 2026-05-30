@@ -16,7 +16,7 @@ export default function MegaVantage() {
     if (!script) {
       script = document.createElement('script');
       script.id = SCRIPT_ID;
-      script.src = '/vantage-demo/vantage-demo.js?v=2';
+      script.src = '/vantage-demo/vantage-demo.js?v=3';
       script.onload = mount;
       document.body.appendChild(script);
     } else {
