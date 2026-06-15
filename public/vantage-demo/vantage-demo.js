@@ -346,7 +346,7 @@
       tabbar.innerHTML = '';
 
       sidebar.appendChild(el('div', { class: 'vd-logo' }, [
-        el('div', { class: 'vd-logo-mark' }, 'Y'),
+        el('div', { class: 'vd-logo-mark' }, 'V'),
         el('div', null, [
           el('div', { class: 'vd-logo-name' }, 'VANTAGE'),
           el('div', { class: 'vd-logo-sub' }, 'BY MEGA')
