@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function PricingCard({ badge, badgeColor, title, price, subPrice, features, ctaLabel, ctaStyle }) {
+function PricingCard({ badge, badgeColor, title, price, subPrice, savingsText, features, ctaLabel, ctaStyle }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -29,7 +29,12 @@ function PricingCard({ badge, badgeColor, title, price, subPrice, features, ctaL
         letterSpacing: 1, marginBottom: 8 }}>{title}</div>
 
       <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 44, color: '#fff',
-        letterSpacing: 1, lineHeight: 1, marginBottom: subPrice ? 6 : 24 }}>{price}</div>
+        letterSpacing: 1, lineHeight: 1, marginBottom: subPrice ? 6 : savingsText ? 8 : 24 }}>{price}</div>
+
+      {savingsText && (
+        <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12,
+          color: '#4FB7A6', marginBottom: 20, lineHeight: 1.4 }}>{savingsText}</div>
+      )}
 
       {subPrice && (
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13,
@@ -72,6 +77,9 @@ function PricingCard({ badge, badgeColor, title, price, subPrice, features, ctaL
 }
 
 export default function MegaPricing() {
+  const [billing, setBilling] = useState('quarterly');
+  const isQuarterly = billing === 'quarterly';
+
   return (
     <section id="pricing" className="section-pad" style={{ background: '#111', padding: '100px 0' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="inner-container">
@@ -80,8 +88,29 @@ export default function MegaPricing() {
           SIMPLE PRICING. SERIOUS RESULTS
         </div>
         <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16,
-          color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 72 }}>
+          color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 40 }}>
           Choose the plan that fits where you are.
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 56 }}>
+          <div style={{
+            background: '#0A0A0A', border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: 999, padding: 4, display: 'flex',
+          }}>
+            {['quarterly', 'monthly'].map(opt => (
+              <button key={opt} onClick={() => setBilling(opt)} style={{
+                background: billing === opt ? '#0F52BA' : 'transparent',
+                color: billing === opt ? '#fff' : 'rgba(255,255,255,0.5)',
+                border: 'none', borderRadius: 999,
+                padding: '10px 28px', cursor: 'pointer',
+                fontFamily: "'Montserrat', sans-serif",
+                fontSize: 13, fontWeight: 700, letterSpacing: 0.5,
+                transition: 'all 0.2s ease',
+              }}>
+                {opt === 'quarterly' ? 'Quarterly' : 'Monthly'}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, alignItems: 'start' }}
@@ -89,7 +118,8 @@ export default function MegaPricing() {
           <PricingCard
             badge="Foundations" badgeColor="#FF6B6B"
             title="MEGA Mentorship Foundations"
-            price="AED 500 / month"
+            price={isQuarterly ? 'AED 1,350 / quarter' : 'AED 500 / month'}
+            savingsText={isQuarterly ? 'Save AED 150 vs monthly billing.' : null}
             features={[
               'Weekly Town Halls',
               'Access to Vantage (Coursework & Resources)',
@@ -103,7 +133,8 @@ export default function MegaPricing() {
           <PricingCard
             badge="Breakthrough" badgeColor="#0F52BA"
             title="MEGA Mentorship Breakthrough"
-            price="AED 1,000 / month"
+            price={isQuarterly ? 'AED 2,700 / quarter' : 'AED 1,000 / month'}
+            savingsText={isQuarterly ? 'Save AED 300 vs monthly billing.' : null}
             features={[
               'Everything in Foundations, plus:',
               'Weekly 1:1 Mentorship Calls',
